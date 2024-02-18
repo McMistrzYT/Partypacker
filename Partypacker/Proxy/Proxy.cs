@@ -168,6 +168,7 @@ namespace Partypacker.Net
                 }
 
                 oSession.RequestHeaders.Add("X-Partypack-Token", Token);
+                oSession.RequestHeaders.Remove("Authorization");
 
                 if (oSession.PathAndQuery.Contains("/master.blurl")
                  || oSession.PathAndQuery.Contains("/main.blurl"))
